@@ -1,0 +1,242 @@
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #222;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f4f8;
+        }
+        header {
+            background-color: #2987c6;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .navbar {
+            top: 0;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        /* Questa classe crea lo spazio sopra ogni sezione */
+        .section::before {
+            content: "";
+            display: block;
+            height: 20px; /* Altezza della navbar + spazio extra */
+            margin-top: -60px;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        /* Stile per l'offset di scroll */
+        html {
+            scroll-padding-top: 20px; /* Altezza della navbar + spazio extra */
+        }
+
+        .section {
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 45px 30px 30px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            display: flex;
+            align-items: center;
+            color: #237db9;
+        }
+        .profile-photo {
+            float: right;
+            margin: 45px 30px 20px 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 4px solid white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .social-links a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            background-color: #2980b9;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #34495e;
+            border-radius: 3px;
+        }
+        .publications li {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .publications li strong {
+            font-size: 1.0em;
+            color: #2c3e50;
+        }
+
+        .publications li em {
+            color: #7f8c8d;
+            font-style: normal;
+        }
+
+        .publications li .type {
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .publications li a {
+            color: #24323c;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .publications li a:hover {
+            text-decoration: underline;
+        }
+
+        .publication-title:hover {
+        color: #074e7d; /* Cambia in blu al passaggio del mouse */
+        text-decoration: underline; /* Aggiunge sottolineatura per dare feedback visivo */
+        }
+        .icon-spacing {
+        margin-right: 8px;
+        }
+        .email-link {
+        color: white; /* Colore desiderato */
+        text-decoration: none; /* Rimuove la sottolineatura */
+        }
+        
+        .publications-container {
+            max-height: 400px; /* Altezza iniziale, mostra circa 3-4 pubblicazioni */
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        #expand-publications {
+            display: none;
+        }
+        #expand-publications:checked ~ .publications-container {
+            max-height: 3000px; /* Un valore sufficientemente alto per mostrare tutte le pubblicazioni */
+        }
+        .expand-btn {
+            background-color: #237db9;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .expand-btn:hover {
+            background-color: #2c3e50;
+        }
+        #expand-publications:checked ~ .expand-btn .show-more {
+            display: none;
+        }
+        #expand-publications:not(:checked) ~ .expand-btn .show-less {
+            display: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+            color: #021420; /* Colore al passaggio del mouse */
+        }
+
+    .courses li {
+            padding: 0;
+        }
+        .course-item {
+            margin-bottom: 5px;
+            position: relative;
+        }
+        .course-title {
+            font-weight: bold;
+            margin-right: 200px;
+        }
+        .course-date {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-style: italic;
+        }
+        .course-institution {
+            display: block;
+            margin-bottom: 18px;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            font-size: 0.9em;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+            nav {
+                text-align: center;
+            }
+        }
+
+        #back-to-top {
+            width: 40px; /* Slightly larger for better visibility */
+            height: 40px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2987c6;
+            border-radius: 50%;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            display: none; /* Initially hidden */
+            display: flex; /* Add this to enable flexbox */
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+        }
+        
+        #back-to-top:hover {
+            background-color: #2c3e50;
+        }
+        
+        #back-to-top i {
+            margin: 0;
+        }
+        
