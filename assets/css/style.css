@@ -187,37 +187,12 @@
             top: 0;
             right: 0;
             font-style: italic;
+            color: #7f8c8d;
         }
         .course-institution {
             display: block;
             margin-bottom: 18px;
         }
-
-        .courses {
-            list-style-type: none;
-            padding: 0;
-          }
-          
-          .course-item {
-            margin-bottom: 18px;
-            position: relative;
-          }
-          
-          .course-title {
-            font-weight: bold;
-            display: block;
-          }
-          
-          .course-date {
-            font-style: italic;
-            display: block;
-            margin-top: 3px;  /* Aggiunge un po' di spazio tra il titolo e la data */
-          }
-          
-          .course-institution {
-            display: block;
-            margin-top: 3px;  /* Aggiunge un po' di spazio tra la data e l'istituzione */
-          }
 
         footer {
             margin-top: 30px;
@@ -227,7 +202,7 @@
             font-size: 0.9em;
             color: #777;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             body {
                 padding: 10px;
             }
@@ -235,29 +210,28 @@
                 width: 120px;
                 height: 120px;
             }
+
             nav {
                 text-align: center;
             }
 
             .course-item {
-                padding-right: 200px;
-              }
-            
-              .course-title {
-                margin-right: 200px;
-              }
-            
-              .course-date {
-                position: absolute;
+                position: relative;
+            }
+        
+            .course-title {
+                display: block;
+                margin-right: 0;
+            }
+        
+            .course-date {
+                display: block;
+                margin-top: 5px;
+                text-align: left;
+                position: relative;
                 top: 0;
                 right: 0;
-                margin-top: 0;  /* Rimuove il margine superiore su schermi più grandi */
-              }
-            
-              .course-institution {
-                margin-top: 0;  /* Rimuove il margine superiore su schermi più grandi */
-              }
-
+            }
         }
 
         #back-to-top {
