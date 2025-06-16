@@ -39,8 +39,8 @@
     <header>
         <img src="assets/img/pic_profile.jpg" alt="Foto profilo di Roberta De Fazio" class="profile-photo">
         <h1>Roberta De Fazio</h1>
-        <p><a href="mailto:roberta.defazio@unicampania.it" class="email-link">roberta.defazio@unicampania.it</a></p>
-        <p>Postdoctoral researcher in Computer Science <br>University of Campania "Luigi Vanvitelli" - Caserta, IT</p>
+        <p>Postdoctoral Researcher in Computer Science <br>University of Campania "Luigi Vanvitelli" - Caserta, IT</p>
+        <p><a href="mailto:roberta.defazio@unicampania.it" class="email-link">roberta.defazio@unicampania.it</a></p>    
         <div class="social-links">
             <a href="https://scholar.google.it/citations?hl=it&user=lD_2n6EAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">
                 <i class="ai ai-google-scholar"></i> Google Scholar
@@ -61,12 +61,16 @@
     </header>
 
     <nav class="navbar">
-        <a href="#about">About me</a> |
-        <a href="#research">Research</a> |
-        <a href="#education">Education</a> |
-        <a href="#publications">Publications</a> |
-        <a href="#activities">Activities</a> |
-        <a href="#contact">Contact</a>
+        <button class="navbar-toggle" aria-label="Open navigation" style="display:none;">&#9776;</button>
+        <ul class="navbar-list">
+            <li><a href="#about" class="active">About me</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <div class="section" id="about">
@@ -76,7 +80,7 @@
             Her interests lie in Predictive Maintenance, Process Mining and Artificial Intelligence.
         </p>
         <p style="text-align: justify;">
-            Roberta earned her Bachelor’s Degree in Mathematics, as well as her Master’s Degree in Mathematics from the University of Campania Luigi Vanvitelli.
+            Roberta earned her Bachelor's Degree in Mathematics, as well as her Master's Degree in Mathematics from the University of Campania Luigi Vanvitelli.
             As part of her Ph.D. studies, Roberta spent three months as a visiting researcher at Hasselt University in Belgium and six months at a corporate research laboratory with Gematica S.r.l., gaining valuable international and industry experience.
         </p>
 
@@ -94,37 +98,20 @@
              </ul>
             The research activities focus on the design and the implementation of analysis techniques that combine model-based and data-driven approaches in AI-intensive contexts (Clinical Decision Support Systems, Digital Twins, Prediction Maintenance) and on the evaluation and assurance of their trustworthiness.
             In particular, the efforts of the research are devoted to extending existent formalism like Fault Trees, Petri Nets, and Bayesian Networks and to the application and comparison with Process Mining (traditional and Object-Centric) and machine learning algorithms for Prognostic Health Monitoring.
-
+        <br><br>
         <h3>Research projects</h3>
         <ul>
             <li>Sistema di sUpporto Decisionale per la diagnosi precoce e il follow-up di pazienti affetti da Valvole Uretrali Posteriori (SUD4VUP), funded by Ecosistema RAISE – Spoke 2 2024/25</li>
-            <li>aDversarial scenArios geneRation With dIgital twiNs In induSTry (DARWNIST), funded by the young researchers programme, Università della Campania “Luigi Vanvitelli” 2022/23.</li>
+            <li>aDversarial scenArios geneRation With dIgital twiNs In induSTry (DARWNIST), funded by the young researchers programme, Università della Campania "Luigi Vanvitelli" 2022/23.</li>
         </ul>
     </div>
 
     <div class="section" id="education">
         <h2><i class="fa-solid fa-graduation-cap icon-spacing"></i> Education</h2>
-        <ul class="courses">
-            <li class="course-item">
-                <span class="course-title">PhD in Mathematics, Physics and Engineering Applications</span>
-                <span class="course-date">Dec 2021 - Feb 2025</span>
-                <span class="course-institution">University of Campania 'Luigi Vanvitelli'</span>
-            </li>
-            <li class="course-item">
-                <span class="course-title">M.Sc. in Mathematics (with Honors)</span>
-                <span class="course-date">Sep 2019 - Jul 2021</span>
-                <span class="course-institution">University of Campania 'Luigi Vanvitelli'</span>
-            </li>
-            <li class="course-item">
-                <span class="course-title">B.Sc. in Mathematics (with Honors)</span>
-                <span class="course-date">Sep 2015 - Mar 2019</span>
-                <span class="course-institution">University of Campania 'Luigi Vanvitelli'</span>
-            </li>
-            <li class="course-item">
-                <span class="course-title">Scientific High School Diploma</span>
-                <span class="course-date">Sep 2010 - Jun 2015</span>
-                <span class="course-institution">Liceo Scientifico Statale 'A. Diaz'</span>
-            </li>
+        <ul class="courses compact-education">
+            <li><strong>PhD in Mathematics, Physics and Engineering Applications</strong> — University of Campania 'Luigi Vanvitelli' <span class="course-date">(Dec 2021 - Feb 2025)</span></li>
+            <li><strong>M.Sc. in Mathematics (with Honors)</strong> — University of Campania 'Luigi Vanvitelli' <span class="course-date">(Sep 2019 - Jul 2021)</span></li>
+            <li><strong>B.Sc. in Mathematics (with Honors)</strong> — University of Campania 'Luigi Vanvitelli' <span class="course-date">(Sep 2015 - Mar 2019)</span></li>
         </ul>
     </div>
 
@@ -185,16 +172,14 @@
         </label>
     </div>
 
-
-
     <div class="section" id="activities">
         <h2><i class="fa-solid fa-calendar-check icon-spacing"></i>Activities</h2>
 
         <div class="subsection" id="tutoring">
             <h3><i class="fa-solid fa-chalkboard-user icon-spacing"></i> Tutoring and/or teaching</h3>
             <ul>
-                <li>2022-today: Academic Tutor of “Fondamenti di Informatica” (Fundamentals of Programming) at the bachelor’s degree in “Mathematics” (8 CFU)</li>
-                <li>2022-2023: Co-Supervisor Bachelor’s Degree Thesis in Basi di Dati e Sistemi Informativi (Databases and Information Systems)“Improvement of beam quality particles in linear accelerators” – Dott.ssa Erica Ferrone</li>
+                <li>2022-today: Academic Tutor of "Fondamenti di Informatica" (Fundamentals of Programming) at the bachelor's degree in "Mathematics" (8 CFU)</li>
+                <li>2022-2023: Co-Supervisor Bachelor's Degree Thesis in Basi di Dati e Sistemi Informativi (Databases and Information Systems)"Improvement of beam quality particles in linear accelerators" – Dott.ssa Erica Ferrone</li>
             </ul>
         </div>
         
@@ -239,6 +224,42 @@
             </ul>
         </div>
     </div>
+
+    <div class="section" id="skills">
+        <h2><i class="fa-solid fa-code icon-spacing"></i>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3>Research Areas</h3>
+                <ul>
+                    <li>Predictive Maintenance</li>
+                    <li>Process Mining</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Digital Twins</li>
+                    <li>Critical Infrastructures</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Data Analysis</li>
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>TensorFlow</li>
+                    <li>PyTorch</li>
+                    <li>Scikit-learn</li>
+                    <li>Git</li>
+                    <li>LaTeX</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
 
     <div class="section" id="contact">
@@ -247,6 +268,9 @@
             <p><strong><i class="fa-solid fa-envelope icon-spacing"></i></strong>roberta.defazio@unicampania.it</p>
             <p><strong><i class="fa-solid fa-building icon-spacing"></i> </strong>Dept. of Mathematics and Physics, University of Campania Luigi Vanvitelli</p>
             <p><strong><i class="fa-solid fa-location-dot icon-spacing"></i></strong>Viale Abramo Lincoln, 5, 81100 Caserta CE, Italy</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps?q=Viale%20Abramo%20Lincoln%2C%205%2C%2081100%20Caserta%20CE%2C%20Italy&output=embed" width="100%" height="260" style="border:0; border-radius:12px; margin-top:1.5em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     
@@ -267,7 +291,7 @@
         window.onscroll = function() {
             let button = document.getElementById('back-to-top');
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                button.style.display = "block";
+                button.style.display = "flex";
             } else {
                 button.style.display = "none";
             }
@@ -283,21 +307,58 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-    
-            const targetId = this.getAttribute('href').substring(1); // Rimuovi il '#' dall'id
-            const targetElement = document.getElementById(targetId);
-    
-            targetElement.scrollIntoView({
-              behavior: 'smooth' // Scroll fluido
-            });
-          });
+        // Hamburger menu toggle
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarList = document.querySelector('.navbar-list');
+        navbarToggle.style.display = '';
+        navbarToggle.addEventListener('click', function() {
+            navbarList.classList.toggle('open');
         });
-      </script>
 
+        // Scroll con offset per navbar sticky
+        document.querySelectorAll('.navbar-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        const navbar = document.querySelector('.navbar');
+                        const navHeight = navbar.offsetHeight;
+                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+                        window.scrollTo({
+                            top: targetTop,
+                            behavior: 'smooth'
+                        });
+                        // Chiudi il menu hamburger su mobile
+                        navbarList.classList.remove('open');
+                    }
+                }
+                document.querySelectorAll('.navbar-list a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
 
+        // Scrollspy semplice: aggiorna la classe 'active' in base alla sezione visibile
+        const sections = document.querySelectorAll('div.section, div#contact');
+        window.addEventListener('scroll', function() {
+            let scrollPos = window.scrollY || document.documentElement.scrollTop;
+            let found = false;
+            const navbar = document.querySelector('.navbar');
+            const navHeight = navbar.offsetHeight;
+            sections.forEach(section => {
+                const id = section.getAttribute('id');
+                const offset = section.offsetTop - navHeight - 8;
+                const height = section.offsetHeight;
+                if(scrollPos >= offset && scrollPos < offset + height && !found) {
+                    document.querySelectorAll('.navbar-list a').forEach(l => l.classList.remove('active'));
+                    const activeLink = document.querySelector('.navbar-list a[href="#' + id + '"]');
+                    if(activeLink) activeLink.classList.add('active');
+                    found = true;
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
