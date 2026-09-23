@@ -38,10 +38,13 @@
     
 </head>
 <body>
+    <div id="scroll-progress"></div>
     <header>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <img src="assets/img/pic_profile.jpg" alt="Foto profilo di Roberta De Fazio" class="profile-photo">
         <h1>Roberta De Fazio</h1>
         <p>Postdoctoral Researcher in Computer Science <br>University of Campania "Luigi Vanvitelli" - Caserta, IT</p>
+        <p class="typed-line">Working on <span id="typed-text">Predictive Maintenance</span><span class="typed-cursor">|</span></p>
         <p><a href="mailto:roberta.defazio@unicampania.it" class="email-link">roberta.defazio@unicampania.it</a></p>    
         <div class="social-links">
             <a href="https://scholar.google.it/citations?hl=it&user=lD_2n6EAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">
@@ -63,6 +66,7 @@
                 <i class="fa-brands fa-github"></i> GitHub
             </a>
         </div>
+        <div class="header-wave" aria-hidden="true"></div>
     </header>
 
     <nav class="navbar">
@@ -90,6 +94,12 @@
             As part of her Ph.D. studies, Roberta spent three months as a visiting researcher at Hasselt University in Belgium (Erasmus+ programme) and six months at a corporate research laboratory with Gematica S.r.l., gaining valuable international and industry experience.
             She also holds the National Habilitation for High School Teaching in Mathematics and Physics (A027) and is a member of the <a href="https://www.eatcs.org" target="_blank">European Association for Theoretical Computer Science (EATCS)</a>.
         </p>
+        <div class="stats">
+            <div class="stat"><span class="stat-num" data-count="auto-pubs">0</span><span class="stat-label">Publications</span></div>
+            <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Research projects</span></div>
+            <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Collaborations</span></div>
+            <div class="stat"><span class="stat-num" data-count="auto-talks">0</span><span class="stat-label">Talks</span></div>
+        </div>
 
     </div>
 
@@ -156,90 +166,96 @@
 
     <div class="section" id="publications">
         <h2><i class="fa-solid fa-book-open icon-spacing"></i>Publications</h2>
+        <div class="pub-filters" role="group" aria-label="Filter publications">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="journal">Journals</button>
+            <button class="chip" data-filter="conference">Conferences</button>
+            <button class="chip" data-filter="book">Book chapters</button>
+        </div>
         <input type="checkbox" id="expand-publications">
         <div class="publications-container">
             <ul class="publications">
-                <li>
+                <li data-type="journal">
                     <strong><a href="https://doi.org/10.1016/j.ress.2026.112242" target="_blank" class="publication-title">Inferring Failure Processes via Causality Analysis: from Event Logs to Predictive Fault Trees</a></strong><br>
                     R. De Fazio, B. Depaire, S. Marrone, L. Verde<br>
                     <em>Reliability Engineering &amp; System Safety (2026)</em>
                 </li>
-                <li>
+                <li data-type="journal">
                     <strong><a href="https://doi.org/10.1016/j.jss.2025.112720" target="_blank" class="publication-title">CARE: Clinical AI Predictor for Posterior Urethral Valves - Design, Explainability and Evaluation</a></strong><br>
                     R. De Fazio, S. Marrone, P. Tirelli, R. Chianese, C. Di Nardo, P. Marzuillo, L. Verde<br>
                     <em>Journal of Systems and Software (2025)</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1007/978-3-032-11381-8_12" target="_blank" class="publication-title">AI in Pediatric Urology: Deep Learning-based Approach supporting Posterior Urethral Valves Diagnosis on VCUG Imaging</a></strong><br>
                     C. Russo, G. Settembre, G. Gargano, M.S. de Biase, R. De Fazio<br>
                     <em>Image Analysis and Processing - ICIAP 2025 Workshops. Lecture Notes in Computer Science, vol. 16170.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1016/j.procs.2025.10.026" target="_blank" class="publication-title">Towards Paediatric Digital Twins: STELLA-Segmentation Tool for Enhanced Localisation and Labelling of Diagnostic Areas</a></strong><br>
                     R. De Fazio, M.S. de Biase, P. Marzuillo, P. Tirelli, F. Marulli, S. Marrone, L. Verde<br>
                     <em>Procedia Computer Science (2025). 270, 5579-5588.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1016/j.procs.2025.10.020" target="_blank" class="publication-title">Detecting Vegetation Patterns in Satellite Images: SILVIA, a Segmentation-Based Approach</a></strong><br>
                     M.S. de Biase, R. De Fazio, S. Marrone<br>
                     <em>Procedia Computer Science (2025). 270, 5520-5530.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1016/j.procs.2025.10.024" target="_blank" class="publication-title">Towards a pre-surgery clinical decision support system</a></strong><br>
                     S. Marrone, R. De Fazio, R. Picone, L. Verde<br>
                     <em>Procedia Computer Science (2025). 270, 5559-5568.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.5220/0013520700003944" target="_blank" class="publication-title">Towards a Digital Twin of the Cardiovascular System</a></strong><br>
                     C. Nespolino, R. De Fazio, S. Marrone, L. Verde<br>
                     <em>Proceedings of the 10th International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)</em>
                 </li>
-                <li>
+                <li data-type="book">
                     <strong><a href="https://doi.org/10.1007/978-3-031-95044-5_8" target="_blank" class="publication-title">A Unifying Approach for Digital Twins in Healthcare: Perspectives and Experiences</a></strong><br>
                     R. De Fazio, C. Nespolino, S. Marrone, L. Verde<br>
                     <em>In Digital Transformation in Healthcare Systems for Patient Care. Intelligent Systems Reference Library (2025), vol. 279</em>
                 </li>
-                <li>
+                <li data-type="journal">
                     <strong><a href="https://doi.org/10.1016/j.jvoice.2025.03.028" target="_blank" class="publication-title">Reproducible Machine Learning-Based Voice Pathology Detection: Introducing the Pitch Difference Feature</a></strong><br>
                     J. Vrba, J. Steinbach, T. Jirsa, L. Verde, R. De Fazio, N. Homma, Y. Zeng, K. Ichiji, L. Hájek, Z. Sedláková, J. Mareš<br>
                     <em>Journal of Voice</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1016/j.procs.2024.09.598" target="_blank" class="publication-title">Towards Hepatic Cancer Detection with Bayesian Networks for Patients Digital Twins Modelling</a></strong><br>
                     R. De Fazio, A. Bartoş, V. Leonetti, S. Marrone, L. Verde<br>
                     <em>Procedia Computer Science (2024). 246, 5104-5113.</em>
                 </li>
-                <li>
+                <li data-type="journal">
                     <strong><a href="https://doi.org/10.1016/j.compbiomed.2024.109021" target="_blank" class="publication-title">HEAR set: A ligHtwEight acoustic paRameters set to assess mental health from voice analysis</a></strong><br>
                     L. Verde, F. Marulli, R. De Fazio, L. Campanile, S. Marrone<br>
                     <em>Computers in Biology and Medicine 182, 109021 (2024).</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://ceur-ws.org/Vol-3762/517.pdf" target="_blank" class="publication-title">Beyond the Hype: Toward a Concrete Adoption of the Fair and Responsible Use of AI</a></strong><br>
                     L. Campanile, R. De Fazio, M. Di Giovanni, F. Marulli<br>
                     <em>CEUR Workshop Proceedings of the Ital-IA, Naples, May 29-30, 2024. pp. 106-111.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.48550/arXiv.2403.13785" target="_blank" class="publication-title">Towards an extension of Fault Trees in the Predictive Maintenance Scenario</strong></a><br>R. De Fazio, S. Marrone, L. Verde, V. Reccia, P. Valletta
                     <br><em>2024 19th European Dependable Computing Conference (EDCC). April 8-11 2024, Leuven.</em> <!--<span class="type">[Conference Paper]</span><br> -->
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1007/978-3-031-56107-8_4" target="_blank" class="publication-title">CaseID Detection for Process Mining: A Heuristic-Based Methodology</strong></a><br>R. De Fazio, A. Balzanella, S. Marrone, F. Marulli, L. Verde, V. Reccia, P. Valletta
                     <br><em>Process Mining Workshops. ICPM 2023. Lecture Notes in Business Information Processing, vol 503.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1109/CSR57506.2023.10224945" target="_blank" class="publication-title">Merging Model-Based and Data-Driven Approaches for Resilient Systems Digital Twins Design</strong></a><br>L. Campanile, M.S. de Biase, R. De Fazio, M. Di Giovanni, F. Marulli, L. Verde
                     <br><em>2023 IEEE International Conference on Cyber Security and Resilience (CSR), pp. 301-306.</em>
                 </li>
-                <li>
+                <li data-type="conference">
                     <strong><a href="https://doi.org/10.1016/j.procs.2023.10.112" target="_blank" class="publication-title">Inferring Emotional Models from Human-Machine Speech Interactions</strong></a><br>L. Campanile, R. De Fazio, M. Di Giovanni, S. Marrone, F. Marulli, L. Verde
                     <br><em>Procedia Computer Science 225, 1241-1250, 27th International Conference KES 2023.</em>
                 </li>
-                <li>
+                <li data-type="journal">
                     <strong><a href="https://doi.org/10.3233/AIS-230065" target="_blank" class="publication-title">A Petri net oriented approach for advanced building energy management systems</strong></a><br>S. Marrone, L. Campanile, R. De Fazio, M. Di Giovanni, U. Gentile, F. Marulli, L. Verde
                     <br><em>Journal of Ambient Intelligence and Smart Environments, vol. 15, no. 3, pp. 211-233 (2023).</em>
                 </li>
-                <li>
+                <li data-type="journal">
                     <strong><a href="https://doi.org/10.3390/info14010021" target="_blank" class="publication-title">Explainabilty comparison between random forests and neural networks—case study of amino acid volume prediction</strong></a><br>R. De Fazio, R. Di Giovannantonio, E. Bellini, S. Marrone
                     <br><em>Information 2023, 14(1), 21.</em>
                 </li> 
@@ -376,6 +392,7 @@
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Hamburger menu toggle
